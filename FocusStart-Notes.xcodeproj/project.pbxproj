@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		A97C508E26024849000BE768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C508D26024849000BE768 /* AppDelegate.swift */; };
 		A97C509026024849000BE768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C508F26024849000BE768 /* SceneDelegate.swift */; };
-		A97C509226024849000BE768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C509126024849000BE768 /* ViewController.swift */; };
+		A97C509226024849000BE768 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C509126024849000BE768 /* MainViewController.swift */; };
 		A97C509526024849000BE768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97C509326024849000BE768 /* Main.storyboard */; };
 		A97C509826024849000BE768 /* FocusStart_Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A97C509626024849000BE768 /* FocusStart_Notes.xcdatamodeld */; };
 		A97C509A26024849000BE768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97C509926024849000BE768 /* Assets.xcassets */; };
 		A97C509D26024849000BE768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97C509B26024849000BE768 /* LaunchScreen.storyboard */; };
+		A9AF899626025B6C00EDC42E /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF899526025B6C00EDC42E /* NoteViewController.swift */; };
+		A9AF89A026026AE800EDC42E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF899F26026AE800EDC42E /* CoreDataManager.swift */; };
+		A9AF89A52602736400EDC42E /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AF89A42602736400EDC42E /* UserDefaults+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A97C508A26024849000BE768 /* FocusStart-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FocusStart-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97C508D26024849000BE768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A97C508F26024849000BE768 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A97C509126024849000BE768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A97C509126024849000BE768 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A97C509426024849000BE768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A97C509726024849000BE768 /* FocusStart_Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FocusStart_Notes.xcdatamodel; sourceTree = "<group>"; };
 		A97C509926024849000BE768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A97C509C26024849000BE768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A97C509E26024849000BE768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AF899526025B6C00EDC42E /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		A9AF899F26026AE800EDC42E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A9AF89A42602736400EDC42E /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,51 @@
 		A97C508C26024849000BE768 /* FocusStart-Notes */ = {
 			isa = PBXGroup;
 			children = (
+				A9AF899A2602670D00EDC42E /* Model */,
+				A9AF899C2602672B00EDC42E /* Controllers */,
+				A9AF899B2602671100EDC42E /* Views */,
+				A9AF89A32602734D00EDC42E /* Extensions */,
 				A97C508D26024849000BE768 /* AppDelegate.swift */,
 				A97C508F26024849000BE768 /* SceneDelegate.swift */,
-				A97C509126024849000BE768 /* ViewController.swift */,
-				A97C509326024849000BE768 /* Main.storyboard */,
 				A97C509926024849000BE768 /* Assets.xcassets */,
-				A97C509B26024849000BE768 /* LaunchScreen.storyboard */,
 				A97C509E26024849000BE768 /* Info.plist */,
-				A97C509626024849000BE768 /* FocusStart_Notes.xcdatamodeld */,
 			);
 			path = "FocusStart-Notes";
+			sourceTree = "<group>";
+		};
+		A9AF899A2602670D00EDC42E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A97C509626024849000BE768 /* FocusStart_Notes.xcdatamodeld */,
+				A9AF899F26026AE800EDC42E /* CoreDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9AF899B2602671100EDC42E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A97C509326024849000BE768 /* Main.storyboard */,
+				A97C509B26024849000BE768 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9AF899C2602672B00EDC42E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A97C509126024849000BE768 /* MainViewController.swift */,
+				A9AF899526025B6C00EDC42E /* NoteViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A9AF89A32602734D00EDC42E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9AF89A42602736400EDC42E /* UserDefaults+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A97C509226024849000BE768 /* ViewController.swift in Sources */,
+				A9AF89A026026AE800EDC42E /* CoreDataManager.swift in Sources */,
+				A9AF899626025B6C00EDC42E /* NoteViewController.swift in Sources */,
+				A97C509226024849000BE768 /* MainViewController.swift in Sources */,
 				A97C508E26024849000BE768 /* AppDelegate.swift in Sources */,
 				A97C509026024849000BE768 /* SceneDelegate.swift in Sources */,
 				A97C509826024849000BE768 /* FocusStart_Notes.xcdatamodeld in Sources */,
+				A9AF89A52602736400EDC42E /* UserDefaults+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
