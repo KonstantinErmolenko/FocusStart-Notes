@@ -9,7 +9,6 @@ import UIKit
 import CoreData
 
 struct CoreDataManager {
-    
     static let context: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError()

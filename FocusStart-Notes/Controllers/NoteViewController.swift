@@ -26,8 +26,7 @@ class NoteViewController: UIViewController {
         if let note = note {
             titleLabel.text = note.title
             contentTextView.text = note.content
-        }
-        
+        }        
         configureKeyboard()
     }
     

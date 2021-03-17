@@ -79,8 +79,8 @@
 		A9AF899A2602670D00EDC42E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A97C509626024849000BE768 /* FocusStart_Notes.xcdatamodeld */,
 				A9AF899F26026AE800EDC42E /* CoreDataManager.swift */,
+				A97C509626024849000BE768 /* FocusStart_Notes.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
